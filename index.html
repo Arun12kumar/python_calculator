@@ -5,73 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <title>usha.com</title>
+    <title>Movie stats</title>
 </head>
-
 <body>
-    <div class="card">
-        <h2>channel view</h2>
-        <p>By Month</p>
-        <div class="pulse"></div>
-        <div class="chart-area">
-            <div class="grid"></div>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="movie-name"placeholder="Enter movie name here..." value="Wednesday">
+            <button id="search-btn">search</button>
         </div>
-
-
+        <div id="result"></div>
     </div>
 
-    <script>
-        const chartOptions = {
-    chart: {
-        type: 'area',
-        height: 180,
-        toolbar: {show: false},
-        zoom: {enable: false}
-    },
 
-
-    colors: ['#3498db'],
-    series: [{name: 'Views', data: [18, 50, 42, 94, 41, 65] }],
-    dataLabels: { enabled: false},
-    stroke: {width: 3,curve: 'smooth'},
-    fill:{
-        type: 'gradient',
-        gradient: {
-            shadeIntensity: 1,
-            opacityFrom: 0.7,
-            opacityTo: 0,
-            stop: [0, 90, 100]
-        }
-    },
-
-
-    xaxis: {
-        categories: ['Feb', 'Apr','jun','Aug','oct','Dec'],
-        axisBorder: {show:false},
-        labels: {style:  {colors:'#a7a7a7', fontFamily: 'Poppins'}}
-
-    },
-    yaxis: {show:true},
-
-    grid: {
-        boardColor: 'rgba(0,0,0,0)',
-        padding: {top: -30,bottom: -8, left: 12,right: 12}
-
-    },
-    tooltip: {
-        enabled: true,
-        y: {formatter: value => '${value}K'},
-        style: {fontFamily: 'Poppins'}
-    },
-    markers: {show: false}
-
-};
-
-
-const chart= new ApexCharts(document.querySelector('.chart-area'), chartOptions);
-chart.render();
-    </script>
+    <script src="key.js"></script>
+    <script src="index.js"></script>
 </body>
-
 </html>
